@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="this.innerHTML='This is after click'">This is before click.</h1>
+    <h2 onclick="changetext(this)">this before text</h2>
+    <button onclick="displaydate()">todays date :</button>
+    <p id="date"></p>
+    <input type="text" id="firstname" onchange="uppercase()">
+    <script>
+        function changetext(id){
+            id.innerHTML='This is afte click';
+
+        }
+    function displaydate(){
+        document.getElementById("date").innerHTML=new Date();
+
+    }
+    function uppercase(){
+        const x=document.getElementById("firstname").innerHTML;
+        x.value=x.value.toUpperCase();
+    }
+    </script>
+</body>
+</html>
